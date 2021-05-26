@@ -1,26 +1,68 @@
-alert('Hello world');
 
-/* The text below when opened in a browser sits Bob and John Doe side by side
-like this "BobJohn Doe"*/
-// let myName="Bob";
-// document.write(myName);
-// myName="John Doe";
-// document.write(myName);
+let pokemonList= [];
 
-// let simpleAddition= 2 + 2;
-// document.write(simpleAddition);
-// document.write(" ");
-//
-// let size= 100;
-// let doubleSize = size * 2;
-// document.write(doubleSize);
-// document.write(" ");
-//
-// let minSize= (doubleSize * 2)- (size / 2)
-// document.write(minSize);
-// document.write(" ");
+let pokemon1={
+  name: 'Bulbasaur',
+  height: 2.25,
+  types: ['grass','poison']
+};
 
-let favoriteFood= "sushi";
-document.write("My favorite food is ")
-document.write(favoriteFood);
-document.write(". ");
+let pokemon2={
+  name: 'Ivysaur',
+  height: 3,
+  types: ['grass','poison']
+};
+
+let pokemon3={
+  name: 'Venusaur',
+  height: 6.5,
+  types: ['grass','poison']
+};
+
+let pokemon4={
+  name: 'Charmander',
+  height: 2,
+  types: ['fire']
+};
+
+let pokemon5={
+  name: 'Charmeleon',
+  height: 3.5,
+  types: ['fire']
+};
+
+let pokemon6={
+  name: 'Charizard',
+  height: 5.5,
+  types: ['fire', 'flying']
+};
+
+let pokemon7={
+  name: 'Squirtle',
+  height: 1.5,
+  types: ['water']
+};
+
+let pokemon8={
+  name: 'Wartortle',
+  height: 3.25,
+  types: ['water']
+};
+
+let pokemon9={
+  name: 'Blastoise',
+  height: 5.25,
+  types: ['water']
+};
+
+pokemonList.push(pokemon1)
+pokemonList.push(pokemon2)
+pokemonList.push(pokemon3)
+pokemonList.push(pokemon4)
+pokemonList.push(pokemon5)
+pokemonList.push(pokemon6)
+pokemonList.push(pokemon7)
+pokemonList.push(pokemon8)
+pokemonList.push(pokemon9)
+
+//test on website in the console with console.log(pokemonList)
