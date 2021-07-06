@@ -2,3 +2,40 @@
 	box-sizing: border-box;
 	margin: 10px;
 }
+
+:root {
+	--primary-background-color: #cc0000; /*red*/
+	--secondary-background-color:#000000 /*black*/;
+	--primary-text-color: #fff; /*white*/
+	--primary-accent-color: #0000000 /*black*/ ;
+	--font-weight-primary: 700;
+}
+
+body {
+
+	background-color: var(--primary-background-color);
+	color: var(--primary-text-color);
+	font-family: Lato, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 30px;
+	font-weight: var(--font-weight-primary);
+	margin-left: 40px ;
+
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: var(--font-weight-primary);
+	margin-left: 40px
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: var(--font-weight-primary);
+	margin-left: 40px
+}
