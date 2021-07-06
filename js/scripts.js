@@ -1,5 +1,21 @@
 
-let pokemonList= [];
+let pokemonRepository = (function () {
+  pokemonList= [];
+
+  function getAll(){
+    return pokemonList;
+  }
+
+  function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
+
+  return {
+    getAll: getAll,
+    add: add
+  };
+})();
+
 
 let bulbasaur={
   name: 'Bulbasaur',
@@ -68,8 +84,9 @@ pokemonList.push(blastoise)
 //test on website in the console with console.log(pokemonList)
 
 pokemonList.forEach(function(pokemon){
-  console.log(pokemon.name + ' is ' + pokemon.height + ' tall ' + ' and a ' + pokemon.types + ' type pokemon.');
+  document.write(pokemon.name + ' is ' + pokemon.height + ' tall and a ' + pokemon.types + ' type pokemon.' + '<br>');
 });
+
 
 
 
