@@ -67,10 +67,20 @@ pokemonList.push(blastoise)
 
 //test on website in the console with console.log(pokemonList)
 
+pokemonList.forEach(function(pokemon){
+  console.log(pokemon.name + ' is ' + pokemon.height + ' tall ' + ' and a ' + pokemon.types + ' type pokemon.');
+});
+
+
+
+
+
+
+/*
 for (let i=0; i<pokemonList.length; i++){
   if (pokemonList[i].height> 6){
     document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")- Wow, that's big! " +"<br>" );
   } else {
     document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") "+"<br>");
   }
-}
+}*/
