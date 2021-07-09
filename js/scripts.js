@@ -10,11 +10,26 @@ let pokemonRepository = (function () {
     pokemonList.push(pokemon);
   }
 
+  function addListItem(pokemon){
+    let pokemonList= document.querySelector(".pokemon-list");
+    let listItem= document.createElement('li');
+    let button= document.createElement('button');
+    button.innerText= pokemon.name;
+    button.classList.add('pokemon-name-button');
+    listItem.appendChild(button);
+    pokemonList.appendChild(listItem);
+  }
+
   return {
     getAll: getAll,
-    add: add
+    add: add,
+    addListItem: addListItem
   };
 })();
+
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
+});
 
 
 let bulbasaur={
@@ -81,8 +96,8 @@ pokemonList.push(squirtle)
 pokemonList.push(wartortle)
 pokemonList.push(blastoise)
 
-//test on website in the console with console.log(pokemonList)
 
+/*
 pokemonList.forEach(function(pokemon){
   let ul=document.querySelector('ul');
   let listItem= document.createElement('li');
@@ -105,5 +120,6 @@ for (let i=0; i<pokemonList.length; i++){
     document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") "+"<br>");
   }
 }*/
+//test on website in the console with console.log(pokemonList)
 
 // emptied from forEach loop: document.write(pokemon.name + ' is ' + pokemon.height + ' tall and a ' + pokemon.types + ' type pokemon.' + '<br>')
