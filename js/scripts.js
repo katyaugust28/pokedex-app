@@ -84,10 +84,14 @@ pokemonList.push(blastoise)
 //test on website in the console with console.log(pokemonList)
 
 pokemonList.forEach(function(pokemon){
-  document.write(pokemon.name + ' is ' + pokemon.height + ' tall and a ' + pokemon.types + ' type pokemon.' + '<br>');
+  let ul=document.querySelector('ul');
+  let listItem= document.createElement('li');
+  let button= document.createElement('button');
+  button.innerText= pokemon.name;
+  button.classList.add('pokemon-name-button');
+  listItem.appendChild(button);
+  ul.appendChild(listItem);
 });
-
-
 
 
 
@@ -101,3 +105,5 @@ for (let i=0; i<pokemonList.length; i++){
     document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") "+"<br>");
   }
 }*/
+
+// emptied from forEach loop: document.write(pokemon.name + ' is ' + pokemon.height + ' tall and a ' + pokemon.types + ' type pokemon.' + '<br>')
