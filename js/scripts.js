@@ -16,8 +16,15 @@ let pokemonRepository = (function () {
     let button= document.createElement('button');
     button.innerText= pokemon.name;
     button.classList.add('pokemon-name-button');
+    button.addEventListener('click', function (event){
+      showDetails(pokemon);
+    })
     listItem.appendChild(button);
     pokemonList.appendChild(listItem);
+  }
+
+  function showDetails(pokemon){
+    console.log(pokemon)
   }
 
   return {
@@ -26,10 +33,6 @@ let pokemonRepository = (function () {
     addListItem: addListItem
   };
 })();
-
-pokemonRepository.getAll().forEach(function (pokemon) {
-  pokemonRepository.addListItem(pokemon);
-});
 
 
 let bulbasaur={
@@ -96,6 +99,9 @@ pokemonList.push(squirtle)
 pokemonList.push(wartortle)
 pokemonList.push(blastoise)
 
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
+});
 
 /*
 pokemonList.forEach(function(pokemon){
