@@ -2,6 +2,8 @@
 let pokemonRepository = (function () {
   pokemonList= [];
 
+  let apiUrl= 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+
   function getAll(){
     return pokemonList;
   }
@@ -27,10 +29,27 @@ let pokemonRepository = (function () {
     console.log(pokemon)
   }
 
+  function loadList(){
+    return fetch(apiUrl).then(function(response) {
+      return response.json();
+    }).then(function(json) {
+      json.results.forEach(function(item) {
+        let pokemon = {
+          name: item.name,
+          detailsUrl: item.url
+        };
+        add(pokemon);
+      });
+    }).catch(function (e) {
+      console.error(e);
+    })
+  }
+
   return {
     getAll: getAll,
     add: add,
-    addListItem: addListItem
+    addListItem: addListItem,
+    loadList: loadList
   };
 })();
 
@@ -99,8 +118,10 @@ pokemonList.push(squirtle)
 pokemonList.push(wartortle)
 pokemonList.push(blastoise)
 
-pokemonRepository.getAll().forEach(function (pokemon) {
-  pokemonRepository.addListItem(pokemon);
+pokemonRepository.loadList().then( function() {
+  pokemonRepository.getAll().forEach(function (pokemon) {
+    pokemonRepository.addListItem(pokemon);
+  });
 });
 
 /*
