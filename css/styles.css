@@ -41,7 +41,7 @@ h2 {
 
 h3 {
 	font-size: 18px;
-	font-weight: var(--font-weight-primary);
+	font-weight: 475;
 	margin-left: 40px
 }
 
@@ -64,4 +64,29 @@ h3 {
 
 .pokemon-list {
   list-style: none
+}
+
+/*Start grid fallback*/
+.grid__item {
+	display: inline-block;
+	width: 33%;
+}
+/*End grid fallback*/
+
+@supports (display: grid) {
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 15px;
+		margin: 0;
+	}
+
+	.grid-item {
+		background-color: #ff1b1b;
+		width: auto;
+		min-height: auto;
+		margin: 0;
+		padding: 15px;
+		text-align: center;
+	}
 }
