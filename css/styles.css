@@ -61,3 +61,7 @@ h3 {
   background-color: #3b4cca; /*inside the box*/
   border: 4px solid #ffde00; /*border of box*/
 }
+
+.pokemon-list {
+  list-style: none
+}
