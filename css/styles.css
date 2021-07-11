@@ -3,6 +3,11 @@
 	margin: 10px;
 }
 
+/*Pokemon colors:
+red- #cc0000
+blue- #3b4cca
+yellow- #ffde00*/
+
 :root {
 	--primary-background-color: #cc0000; /*red*/
 	--secondary-background-color:#000000 /*black*/;
@@ -38,4 +43,21 @@ h3 {
 	font-size: 18px;
 	font-weight: var(--font-weight-primary);
 	margin-left: 40px
+}
+
+.pokemon-name-button {
+  background-color: white;
+  border: none;
+  color: #fff; /*text color of pokemon name*/
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #3b4cca; /*inside the box*/
+  border: 4px solid #ffde00; /*border of box*/
 }
