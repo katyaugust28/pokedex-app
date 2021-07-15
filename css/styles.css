@@ -5,7 +5,10 @@
 
 /*Pokemon colors:
 red- #cc0000
+light red- #ff1b1b
+super light red- #e60909c2
 blue- #3b4cca
+light blue- #4a5ace
 yellow- #ffde00*/
 
 :root {
@@ -14,6 +17,7 @@ yellow- #ffde00*/
 	--primary-text-color: #fff; /*white*/
 	--primary-accent-color: #0000000 /*black*/ ;
 	--font-weight-primary: 700;
+  --modal-container: #e60909c2 /*super light red*/
 }
 
 body {
@@ -89,4 +93,89 @@ h3 {
 		padding: 15px;
 		text-align: center;
 	}
+}
+
+html,
+body {
+  font-family: Arial, sans-serif;
+}
+
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  position: fixed;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e60909c2;
+
+  /* to show it above other content */
+  z-index: 999;
+
+  /* to allow scrolling if the screen is not high enough*/
+  overflow: auto;
+
+  /* this is used to center the modal */
+  display: grid;
+  text-align: center;
+}
+
+.modal {
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #cc0000;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 900px;
+  text-align: center;
+  color: #fff;
+  border: 3px solid #ffde00;
+}
+
+.modal-close {
+  float: right;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.modal h1 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.modal p {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.Pokeheight, .Poketype, .Pokename {
+  text-align: 20px;
+}
+
+.Pokeheight, .Poketype {
+  font-size: 20px;
+}
+
+.Pokename {
+  font-size: 30px;
+}
+
+.PokeImage {
+  width: 50%;
 }
