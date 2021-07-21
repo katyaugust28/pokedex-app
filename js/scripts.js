@@ -10,6 +10,8 @@ let pokemonRepository = (function () {
   let modal= document.querySelector('.modal');
   let modalClose= document.createElement('button');
     modalClose.classList.add('modal-close');
+    modalClose.classList.add('btn');
+    modalClose.classList.add('btn-outline-light');
   let pokeName= document.createElement('h1');
     pokeName.classList.add('Pokename');
   let pokeHeight= document.createElement('p');
@@ -33,9 +35,12 @@ let pokemonRepository = (function () {
     let pokemonList= document.querySelector(".pokemon-list");
     let listpokemon= document.createElement('li');
     listpokemon.classList.add('grid-item');
+    listpokemon.classList.add('list-group-item');
     let button= document.createElement('button');
     button.innerText= pokemon.name.toUpperCase();
     button.classList.add('pokemon-name-button');
+    button.classList.add('btn');
+    button.classList.add('btn-outline-warning');
     button.addEventListener('click', function (event){
       showDetails(pokemon);
     })
