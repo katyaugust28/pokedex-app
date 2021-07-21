@@ -40,7 +40,7 @@ h1 {
 h2 {
 	font-size: 24px;
 	font-weight: var(--font-weight-primary);
-	margin-left: 40px
+	margin-left: 10px
 }
 
 h3 {
@@ -139,7 +139,18 @@ body {
   border: 3px solid #ffde00;
 }
 
+.navbar-brand {
+  width: 150px;
+  font-size: 35px;
+  font-weight: bold;
+  left 15px;
+  background-size: contain;
+}
 
+.navbar-header .navbar-brand img {
+  height: 50px;
+  float: left;
+}
 
 .modal-close {
   float: right;
