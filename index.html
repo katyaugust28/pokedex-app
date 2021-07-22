@@ -12,12 +12,30 @@
 
   <body>
     <nav class="navbar navbar-dark navbar-expand-lg border border-warning rounded" style="background-color:#3b4cca;">
-        <a class="navbar-brand" href="">
-            <img src="Pokeball.svg" width="30" height="30" class="d-inline block align-top" alt="Pokemon logo" />
-            Welcome to the pokedex!
-
-        </a>
+      <a class="navbar-brand" href="">
+          <img src="Pokeball.svg" width="30" height="30" class="d-inline block align-top" alt="Pokemon logo" />
+          Welcome to the pokedex!
+      </a>
     </nav>
+
+    <!-- Pokemon modal info -->
+    <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title" id="pokemonModalTitle">Modal title</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer hidden">
+                    <button type="button" id="types-1" class="btn btn-outline-light" data-dismiss="modal"></button>
+                    <button type="button" id="types-2" class="btn btn-outline-warning"></button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main class="profile">
       <section>
