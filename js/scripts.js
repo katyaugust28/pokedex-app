@@ -44,6 +44,8 @@ let pokemonRepository = (function () {
       $('#pokemon-image').attr('src', pokemon.imageUrl);
 
     });
+
+
   }
 
 
@@ -71,6 +73,7 @@ let pokemonRepository = (function () {
     }).then(function (details){
       //adding details to the item:
       pokemon.imageUrl = details.sprites.front_default;
+      pokemon.imageUrlBack = details.sprites.back_default;
       pokemon.height = details.height;
       pokemon.weight = details.weight;
       pokemon.types = details.types;
@@ -133,6 +136,7 @@ let pokemonRepository = (function () {
 
   $("#pokemonModal").modal("toggle");
 */
+
 
   return {
     getAll: getAll,
