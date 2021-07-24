@@ -88,7 +88,7 @@ let pokemonRepository = (function () {
       }
     }).catch (function (e) {
       console.error(e);
-    });
+    }); 
   }
 
 //adding the modal code

@@ -169,34 +169,3 @@ body {
   text-decoration: underline;
   cursor: pointer;
 }
-/*
-.modal h1 {
-  margin-top: 0;
-  color: #fff;
-}
-
-.modal p {
-  margin-bottom: 0;
-  color: #fff;
-}
-
-.img-container {
-  display: flex;
-  justify-content: center;
-}
-
-.Pokeheight, .Poketype, .Pokename {
-  text-align: 20px;
-}
-
-.Pokeheight, .Poketype {
-  font-size: 20px;
-}
-
-.Pokename {
-  font-size: 30px;
-}
-
-.PokeImage {
-  width: 50%;
-}
