@@ -34,19 +34,27 @@ h1 {
 	font-size: 30px;
 	font-weight: var(--font-weight-primary);
 	margin-left: 40px ;
-
+  color: #cc0000;
+  text-transform: capitalize;
 }
 
 h2 {
 	font-size: 24px;
 	font-weight: var(--font-weight-primary);
-	margin-left: 10px
+	margin-left: 10px;
+
 }
 
 h3 {
 	font-size: 18px;
 	font-weight: 475;
 	margin-left: 40px
+}
+
+p {
+  color: #3b4cca;
+  font-size: 18px;
+	font-weight: 475;
 }
 
 .pokemon-name-button {
